@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ShareSavings.io - Save money with exclusive coupons, deals, and cashback from Amazon, eBay, Shein, AliExpress, TikTok Shop. Earn affiliate revenue on every purchase.">
+    <meta name="keywords" content="coupons, deals, cashback, affiliate, Amazon, eBay, Shein, AliExpress, TikTok Shop, Walmart, save money">
+    <meta name="author" content="ShareSavings.io">
+    <meta property="og:title" content="ShareSavings.io - Save More, Earn More with Smart Coupons">
+    <meta property="og:description" content="Get exclusive coupons and cashback. Share in affiliate revenue on every purchase.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sharesavings.io">
+    <meta property="og:image" content="https://sharesavings.io/og-image.jpg">
+    <title>ShareSavings.io - Save More, Earn More with Smart Affiliate Coupons</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Analytics Placeholder -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 min-h-screen">
+    <!-- Sticky Navigation -->
+    <nav class="bg-white/95 backdrop-blur-lg shadow-lg sticky top-0 z-50 border-b border-indigo-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="/index.html" class="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-pink-600 bg-clip-text text-transparent">
+                        ShareSavings.io
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-indigo-600 font-medium transition">Home</a>
+                    <a href="#coupons" class="text-gray-700 hover:text-indigo-600 font-medium transition">Coupons</a>
+                    <a href="#deals" class="text-gray-700 hover:text-indigo-600 font-medium transition">Deals</a>
+                    <a href="/support/how-it-works.html" class="text-gray-700 hover:text-indigo-600 font-medium transition">How It Works</a>
+                    <a href="/support/contact.html" class="text-gray-700 hover:text-indigo-600 font-medium transition">Contact</a>
+                    <a href="/login.html" class="text-gray-700 hover:text-indigo-600 font-medium transition">Admin</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-indigo-600">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#home" class="block px-3 py-2 text-gray-700 hover:bg-indigo-50 rounded">Home</a>
+                <a href="#coupons" class="block px-3 py-2 text-gray-700 hover:bg-indigo-50 rounded">Coupons</a>
+                <a href="#deals" class="block px-3 py-2 text-gray-700 hover:bg-indigo-50 rounded">Deals</a>
+                <a href="/support/how-it-works.html" class="block px-3 py-2 text-gray-700 hover:bg-indigo-50 rounded">How It Works</a>
+                <a href="/support/contact.html" class="block px-3 py-2 text-gray-700 hover:bg-indigo-50 rounded">Contact</a>
+                <a href="/login.html" class="block px-3 py-2 text-gray-700 hover:bg-indigo-50 rounded">Admin</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div class="bg-white/95 backdrop-blur-lg rounded-3xl shadow-2xl p-8 md:p-12">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-6xl font-black bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent mb-6">
+                    Save More, Earn More with Smart Affiliate Coupons
+                </h1>
+                <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                    Get exclusive coupons, deals, and cashback from Amazon, eBay, Shein, AliExpress, TikTok Shop, and more. Share in the affiliate revenue on every purchase you make.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="/support/affiliate.html" class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-full font-semibold hover:shadow-2xl transform hover:-translate-y-1 transition">
+                        Join as Affiliate
+                    </a>
+                    <a href="#deals" class="bg-white border-2 border-indigo-600 text-indigo-600 px-8 py-4 rounded-full font-semibold hover:bg-indigo-50 transition">
+                        View Latest Deals
+                    </a>
+                </div>
+            </div>
+
+            <!-- Feature Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mt-16">
+                <div class="bg-gradient-to-br from-indigo-50 to-purple-50 p-6 rounded-2xl border border-indigo-100 hover:shadow-xl transform hover:-translate-y-2 transition">
+                    <div class="text-4xl mb-4">💰</div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Exclusive Discounts</h3>
+                    <p class="text-gray-600 text-sm">Verified coupons from top retailers</p>
+                </div>
+                <div class="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-2xl border border-purple-100 hover:shadow-xl transform hover:-translate-y-2 transition">
+                    <div class="text-4xl mb-4">🎁</div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Cashback Rewards</h3>
+                    <p class="text-gray-600 text-sm">Earn money back on purchases</p>
+                </div>
+                <div class="bg-gradient-to-br from-pink-50 to-rose-50 p-6 rounded-2xl border border-pink-100 hover:shadow-xl transform hover:-translate-y-2 transition">
+                    <div class="text-4xl mb-4">🤝</div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Revenue Sharing</h3>
+                    <p class="text-gray-600 text-sm">Share in affiliate commissions</p>
+                </div>
+                <div class="bg-gradient-to-br from-indigo-50 to-blue-50 p-6 rounded-2xl border border-indigo-100 hover:shadow-xl transform hover:-translate-y-2 transition">
+                    <div class="text-4xl mb-4">🛍️</div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Multi-Platform</h3>
+                    <p class="text-gray-600 text-sm">Amazon, eBay, Shein & more</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coupons Section -->
+    <section id="coupons" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <h2 class="text-4xl font-black text-center text-white mb-12">🎫 Featured Coupons & Deals</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Amazon -->
+            <div class="bg-white/95 backdrop-blur-lg rounded-2xl p-6 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition transform">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="w-14 h-14 bg-gradient-to-br from-orange-500 to-yellow-500 rounded-xl flex items-center justify-center text-white font-bold text-2xl">
+                        A
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900">Amazon</h3>
+                </div>
+                <div class="border-2 border-dashed border-indigo-200 rounded-lg p-6 text-center">
+                    <p class="text-gray-600 italic">Exclusive Amazon deals loading...</p>
+                    <span class="inline-block mt-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">Coming Soon</span>
+                </div>
+            </div>
+            <!-- eBay -->
+            <div class="bg-white/95 backdrop-blur-lg rounded-2xl p-6 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition transform">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center text-white font-bold text-2xl">
+                        E
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900">eBay</h3>
+                </div>
+                <div class="border-2 border-dashed border-indigo-200 rounded-lg p-6 text-center">
+                    <p class="text-gray-600 italic">Amazing eBay discounts coming...</p>
+                    <span class="inline-block mt-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">Coming Soon</span>
+                </div>
+            </div>
+            <!-- Shein -->
+            <div class="bg-white/95 backdrop-blur-lg rounded-2xl p-6 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition transform">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="w-14 h-14 bg-gradient-to-br from-pink-500 to-rose-500 rounded-xl flex items-center justify-center text-white font-bold text-2xl">
+                        S
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900">Shein</h3>
+                </div>
+                <div class="border-2 border-dashed border-indigo-200 rounded-lg p-6 text-center">
+                    <p class="text-gray-600 italic">Hot Shein fashion deals loading...</p>
+                    <span class="inline-block mt-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">Coming Soon</span>
+                </div>
+            </div>
+            <!-- AliExpress -->
+            <div class="bg-white/95 backdrop-blur-lg rounded-2xl p-6 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition transform">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="w-14 h-14 bg-gradient-to-br from-red-500 to-orange-500 rounded-xl flex items-center justify-center text-white font-bold text-2xl">
+                        A
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900">AliExpress</h3>
+                </div>
+                <div class="border-2 border-dashed border-indigo-200 rounded-lg p-6 text-center">
+                    <p class="text-gray-600 italic">Best AliExpress coupons coming...</p>
+                    <span class="inline-block mt-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">Coming Soon</span>
+                </div>
+            </div>
+            <!-- TikTok Shop -->
+            <div class="bg-white/95 backdrop-blur-lg rounded-2xl p-6 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition transform">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="w-14 h-14 bg-gradient-to-br from-purple-600 to-pink-600 rounded-xl flex items-center justify-center text-white font-bold text-2xl">
+                        T
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900">TikTok Shop</h3>
+                </div>
+                <div class="border-2 border-dashed border-indigo-200 rounded-lg p-6 text-center">
+                    <p class="text-gray-600 italic">Trending TikTok deals loading...</p>
+                    <span class="inline-block mt-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">Coming Soon</span>
+                </div>
+            </div>
+            <!-- Walmart -->
+            <div class="bg-white/95 backdrop-blur-lg rounded-2xl p-6 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition transform">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="w-14 h-14 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center text-white font-bold text-2xl">
+                        W
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900">Walmart</h3>
+                </div>
+                <div class="border-2 border-dashed border-indigo-200 rounded-lg p-6 text-center">
+                    <p class="text-gray-600 italic">Walmart coupons coming soon...</p>
+                    <span class="inline-block mt-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">Coming Soon</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white mt-20">
+        <!-- Affiliate Disclosure -->
+        <div class="bg-pink-900/30 border-t border-pink-800/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+                <p class="text-sm text-center text-pink-100">
+                    <strong>📢 Affiliate Disclosure:</strong> ShareSavings.io participates in Amazon Associates, eBay Partner Network, AliExpress Affiliate, TikTok Shop Affiliate, and other programs. We may earn commissions when you purchase through our links at no extra cost to you. We share a portion of these earnings with our community.
+                </p>
+            </div>
+        </div>
+
+        <!-- Footer Links -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Legal & Privacy -->
+                <div>
+                    <h3 class="text-lg font-bold text-pink-400 mb-4">Legal & Privacy</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/privacy.html" class="hover:text-pink-400 transition">Privacy Policy</a></li>
+                        <li><a href="/terms.html" class="hover:text-pink-400 transition">Terms of Service</a></li>
+                        <li><a href="/cookies.html" class="hover:text-pink-400 transition">Cookie Policy</a></li>
+                        <li><a href="/gdpr.html" class="hover:text-pink-400 transition">GDPR Compliance</a></li>
+                        <li><a href="/ccpa.html" class="hover:text-pink-400 transition">CCPA Rights</a></li>
+                        <li><a href="/data-removal.html" class="hover:text-pink-400 transition">Data Removal</a></li>
+                    </ul>
+                </div>
+                <!-- Platform Policies -->
+                <div>
+                    <h3 class="text-lg font-bold text-pink-400 mb-4">Platform Policies</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/policies/amazon.html" class="hover:text-pink-400 transition">Amazon Associates</a></li>
+                        <li><a href="/policies/ebay.html" class="hover:text-pink-400 transition">eBay Partner Network</a></li>
+                        <li><a href="/policies/aliexpress.html" class="hover:text-pink-400 transition">AliExpress Affiliate</a></li>
+                        <li><a href="/policies/tiktok.html" class="hover:text-pink-400 transition">TikTok Shop</a></li>
+                        <li><a href="/policies/shein.html" class="hover:text-pink-400 transition">Shein Affiliate</a></li>
+                        <li><a href="/policies/walmart.html" class="hover:text-pink-400 transition">Walmart Affiliate</a></li>
+                        <li><a href="/policies/facebook.html" class="hover:text-pink-400 transition">Meta/Facebook</a></li>
+                    </ul>
+                </div>
+                <!-- Support -->
+                <div>
+                    <h3 class="text-lg font-bold text-pink-400 mb-4">Support</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/support/contact.html" class="hover:text-pink-400 transition">Contact Us</a></li>
+                        <li><a href="/support/faq.html" class="hover:text-pink-400 transition">FAQ</a></li>
+                        <li><a href="/support/how-it-works.html" class="hover:text-pink-400 transition">How It Works</a></li>
+                        <li><a href="/support/cashback.html" class="hover:text-pink-400 transition">Cashback Info</a></li>
+                        <li><a href="/support/affiliate.html" class="hover:text-pink-400 transition">Join as Affiliate</a></li>
+                        <li><a href="/sitemap.html" class="hover:text-pink-400 transition">Sitemap</a></li>
+                    </ul>
+                </div>
+                <!-- Newsletter -->
+                <div>
+                    <h3 class="text-lg font-bold text-pink-400 mb-4">Stay Updated</h3>
+                    <p class="text-sm mb-4">Get the latest deals directly in your inbox.</p>
+                    <form class="flex gap-2">
+                        <input type="email" placeholder="Your email" class="flex-1 px-4 py-2 rounded-lg text-gray-900" required>
+                        <button type="submit" class="bg-pink-600 px-4 py-2 rounded-lg hover:bg-pink-700 transition">Join</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="border-t border-gray-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+                <div class="text-center">
+                    <p class="text-sm text-gray-400">© 2025 ShareSavings.io. All rights reserved.</p>
+                    <p class="text-xs text-gray-500 mt-2">As an Amazon Associate and participant in affiliate programs, we earn from qualifying purchases.</p>
+                    <div class="mt-4">
+                        <img src="https://media.giphy.com/media/67ThRZlYBvibtdF9JH/giphy.gif" alt="Save Money" class="w-32 h-32 mx-auto rounded-lg opacity-80">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
