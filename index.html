@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ShareSavings.io - Save money with exclusive discounts, coupons, cashback offers, and affiliate revenue sharing across Amazon, eBay, Shein, AliExpress, TikTok Shop, and more.">
+    <meta name="keywords" content="coupons, discounts, cashback, deals, affiliate, Amazon, eBay, Shein, AliExpress, TikTok Shop, save money">
+    <meta name="author" content="ShareSavings.io">
+    <meta property="og:title" content="ShareSavings.io - Your Money-Saving Platform">
+    <meta property="og:description" content="Get exclusive discounts, coupons, and cashback offers. Share in affiliate revenue on every purchase.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sharesavings.io">
+    <meta property="og:image" content="https://sharesavings.io/images/og-image.jpg">
+    <title>ShareSavings.io - Save Money with Coupons, Deals & Cashback</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #6366f1;
+            --secondary-color: #8b5cf6;
+            --accent-color: #ec4899;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --bg-light: #f9fafb;
+            --white: #ffffff;
+            --success: #10b981;
+            --shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            min-height: 100vh;
+        }
+
+        /* Header Styles */
+        header {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(99, 102, 241, 0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.75rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s, transform 0.3s;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: var(--primary-color);
+            border-radius: 3px;
+            transition: 0.3s;
+        }
+
+        /* Hero Section */
+        .hero {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 3rem 2rem;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 24px;
+            box-shadow: var(--shadow);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-light);
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            line-height: 1.8;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.05), rgba(236, 72, 153, 0.05));
+            padding: 2rem;
+            border-radius: 16px;
+            border: 1px solid rgba(99, 102, 241, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(99, 102, 241, 0.2);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.25rem;
+        }
+
+        .feature-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Coupons Section */
+        .coupons-section {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem 4rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: 3rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .stores-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .store-card {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .store-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(99, 102, 241, 0.3);
+            border-color: var(--primary-color);
+        }
+
+        .store-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .store-logo {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+            color: var(--white);
+            font-weight: 700;
+        }
+
+        .store-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .coupon-placeholder {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.05), rgba(236, 72, 153, 0.05));
+            border: 2px dashed rgba(99, 102, 241, 0.3);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        .coming-soon {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-top: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(31, 41, 55, 0.98);
+            backdrop-filter: blur(20px);
+            color: var(--white);
+            padding: 4rem 2rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent-color);
+            font-weight: 700;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent-color);
+        }
+
+        .footer-video {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .footer-video img {
+            max-width: 200px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+
+        .affiliate-disclosure {
+            background: rgba(236, 72, 153, 0.1);
+            border: 1px solid rgba(236, 72, 153, 0.3);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            max-width: 1200px;
+            margin: 0 auto 2rem;
+        }
+
+        .affiliate-disclosure p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: flex;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(255, 255, 255, 0.98);
+                backdrop-filter: blur(10px);
+                flex-direction: column;
+                padding: 2rem;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                padding: 1rem;
+            }
+
+            .hero {
+                padding: 2rem 1rem;
+                margin: 2rem 1rem;
+            }
+
+            .coupons-section {
+                padding: 0 1rem 2rem;
+            }
+
+            .stores-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero, .store-card {
+            animation: fadeInUp 0.6s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="#" class="logo">ShareSavings.io</a>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#coupons">Coupons</a></li>
+                <li><a href="#deals">Deals</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <main>
+        <section class="hero" id="home">
+            <h1>Save Money, Share Rewards</h1>
+            <p>
+                Welcome to ShareSavings.io – your ultimate money-saving platform! 
+                Get exclusive coupons, discounts, and cashback offers across top shopping platforms 
+                including Amazon, eBay, Shein, AliExpress, TikTok Shop, and more. 
+                Plus, share in the affiliate revenue every time you shop through our links.
+            </p>
+            
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>Exclusive Discounts</h3>
+                    <p>Access verified coupons and deals from top retailers worldwide</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎁</div>
+                    <h3>Cashback Rewards</h3>
+                    <p>Earn money back on every purchase you make through our platform</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🤝</div>
+                    <h3>Revenue Sharing</h3>
+                    <p>Share in affiliate commissions – we believe in rewarding our community</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛍️</div>
+                    <h3>Multi-Platform</h3>
+                    <p>Shop from Amazon, eBay, Shein, AliExpress, TikTok Shop & more</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Coupons Section -->
+        <section class="coupons-section" id="coupons">
+            <h2 class="section-title">🎫 Featured Coupons & Deals</h2>
+            
+            <div class="stores-grid">
+                <!-- Amazon -->
+                <div class="store-card">
+                    <div class="store-header">
+                        <div class="store-logo">A</div>
+                        <h3 class="store-name">Amazon</h3>
+                    </div>
+                    <div class="coupon-placeholder">
+                        <p>Exclusive Amazon coupons and deals will appear here soon!</p>
+                        <span class="coming-soon">Coming Soon</span>
+                    </div>
+                </div>
+
+                <!-- eBay -->
+                <div class="store-card">
+                    <div class="store-header">
+                        <div class="store-logo">E</div>
+                        <h3 class="store-name">eBay</h3>
+                    </div>
+                    <div class="coupon-placeholder">
+                        <p>Amazing eBay discounts and promo codes loading...</p>
+                        <span class="coming-soon">Coming Soon</span>
+                    </div>
+                </div>
+
+                <!-- Shein -->
+                <div class="store-card">
+                    <div class="store-header">
+                        <div class="store-logo">S</div>
+                        <h3 class="store-name">Shein</h3>
+                    </div>
+                    <div class="coupon-placeholder">
+                        <p>Hot Shein fashion deals and coupons on the way!</p>
+                        <span class="coming-soon">Coming Soon</span>
+                    </div>
+                </div>
+
+                <!-- AliExpress -->
+                <div class="store-card">
+                    <div class="store-header">
+                        <div class="store-logo">A</div>
+                        <h3 class="store-name">AliExpress</h3>
+                    </div>
+                    <div class="coupon-placeholder">
+                        <p>Best AliExpress coupons and flash deals coming up!</p>
+                        <span class="coming-soon">Coming Soon</span>
+                    </div>
+                </div>
+
+                <!-- TikTok Shop -->
+                <div class="store-card">
+                    <div class="store-header">
+                        <div class="store-logo">T</div>
+                        <h3 class="store-name">TikTok Shop</h3>
+                    </div>
+                    <div class="coupon-placeholder">
+                        <p>Trending TikTok Shop deals and special offers loading...</p>
+                        <span class="coming-soon">Coming Soon</span>
+                    </div>
+                </div>
+
+                <!-- Walmart -->
+                <div class="store-card">
+                    <div class="store-header">
+                        <div class="store-logo">W</div>
+                        <h3 class="store-name">Walmart</h3>
+                    </div>
+                    <div class="coupon-placeholder">
+                        <p>Everyday low prices with Walmart coupons coming soon!</p>
+                        <span class="coming-soon">Coming Soon</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="hero" id="about" style="margin-top: 4rem;">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">About ShareSavings.io</h2>
+            <p>
+                We believe shopping online should be rewarding for everyone. That's why we've built 
+                a platform that not only helps you find the best deals and coupons but also shares 
+                affiliate revenue with our community. Every purchase you make through our links 
+                earns you cashback and helps us grow together.
+            </p>
+            <p style="margin-top: 1rem;">
+                Join thousands of smart shoppers who are already saving money and earning rewards 
+                on their everyday purchases. It's free to join, easy to use, and completely transparent.
+            </p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="affiliate-disclosure">
+            <p>
+                <strong>📢 Affiliate Disclosure:</strong> ShareSavings.io is a participant in various affiliate 
+                marketing programs including Amazon Associates, eBay Partner Network, AliExpress Affiliate Program, 
+                TikTok Shop Affiliate Program, and others. This means we may earn a commission when you click on 
+                our links and make a purchase, at no additional cost to you. We share a portion of these earnings 
+                with our community through our cashback and revenue-sharing program. We only recommend products and 
+                services we genuinely believe in.
+            </p>
+        </div>
+
+        <div class="footer-content">
+            <!-- Legal & Compliance -->
+            <div class="footer-section">
+                <h3>Legal & Privacy</h3>
+                <ul>
+                    <li><a href="https://example.com/privacy-policy">Privacy Policy</a></li>
+                    <li><a href="https://example.com/terms-of-service">Terms of Service</a></li>
+                    <li><a href="https://example.com/cookie-policy">Cookie Policy</a></li>
+                    <li><a href="https://example.com/gdpr">GDPR Compliance</a></li>
+                    <li><a href="https://example.com/ccpa">CCPA Rights</a></li>
+                    <li><a href="https://example.com/data-removal">Data Removal Request</a></li>
+                </ul>
+            </div>
+
+            <!-- Platform Policies -->
+            <div class="footer-section">
+                <h3>Platform Policies</h3>
+                <ul>
+                    <li><a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=201909010" target="_blank" rel="noopener">Amazon Associates</a></li>
+                    <li><a href="https://partnernetwork.ebay.com/legal" target="_blank" rel="noopener">eBay Partner Network</a></li>
+                    <li><a href="https://portals.aliexpress.com/help_center.htm" target="_blank" rel="noopener">AliExpress Affiliate</a></li>
+                    <li><a href="https://example.com/tiktok-shop-terms">TikTok Shop Terms</a></li>
+                    <li><a href="https://example.com/shein-affiliate">Shein Affiliate Policy</a></li>
+                    <li><a href="https://affiliates.walmart.com/agreement" target="_blank" rel="noopener">Walmart Affiliate</a></li>
+                </ul>
+            </div>
+
+            <!-- Facebook/Meta Compliance -->
+            <div class="footer-section">
+                <h3>Meta/Facebook App</h3>
+                <ul>
+                    <li><a href="https://example.com/facebook-privacy">Facebook App Privacy</a></li>
+                    <li><a href="https://example.com/facebook-terms">Facebook App Terms</a></li>
+                    <li><a href="https://developers.facebook.com/terms" target="_blank" rel="noopener">Meta Developer Terms</a></li>
+                    <li><a href="https://developers.facebook.com/policy" target="_blank" rel="noopener">Meta Platform Policy</a></li>
+                    <li><a href="https://example.com/facebook-data-deletion">Data Deletion Instructions</a></li>
+                </ul>
+            </div>
+
+            <!-- Support & Info -->
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="https://example.com/faq">FAQ</a></li>
+                    <li><a href="https://example.com/how-it-works">How It Works</a></li>
+                    <li><a href="https://example.com/cashback-info">Cashback Info</a></li>
+                    <li><a href="https://example.com/affiliate-program">Join as Affiliate</a></li>
+                    <li><a href="https://example.com/sitemap.xml">Sitemap</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer Video/GIF -->
+        <div class="footer-video">
+            <p style="color: rgba(255, 255, 255, 0.8); margin-bottom: 1rem; font-size: 0.9rem;">
+                💸 Start Saving Money Today!
+            </p>
+            <img src="https://media.giphy.com/media/67ThRZlYBvibtdF9JH/giphy.gif" 
+                 alt="Save Money Animation" 
+                 style="max-width: 200px; border-radius: 12px;">
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p>&copy; 2024 ShareSavings.io. All rights reserved.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.85rem;">
+                As an Amazon Associate and participant in other affiliate programs, we earn from qualifying purchases.
+            </p>
+            <p style="margin-top: 1rem; color: rgba(255, 255, 255, 0.5); font-size: 0.8rem;">
+                Made with ❤️ for smart shoppers worldwide
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    document.getElementById('navLinks').classList.remove('active');
+                }
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const nav = document.querySelector('nav');
+            const navLinks = document.getElementById('navLinks');
+            const menuToggle = document.querySelector('.menu-toggle');
+            
+            if (!nav.contains(event.target) && navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+            }
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.store-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s, transform 0.6s';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
