@@ -5,7 +5,7 @@ import Layout from '../components/Layout';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
 import { Badge } from '../components/ui/badge';
 import { toast } from 'sonner';
-import { CheckCircle, XCircle, Clock, Instagram, Facebook, PinIcon } from 'lucide-react';
+import { CheckCircle, XCircle, Clock, Instagram, Facebook, PinIcon, FileText } from 'lucide-react';
 
 const Posts = ({ admin, onLogout }) => {
   const [posts, setPosts] = useState([]);
