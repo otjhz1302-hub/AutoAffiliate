@@ -378,6 +378,11 @@ def run_async_job():
 
 # ============= Routes =============
 
+# Health check route
+@api_router.get("/")
+async def root():
+    return {"message": "AutoAffiliatePublisher API is running", "status": "ok"}
+
 @api_router.post("/auth/register", response_model=Token)
 async def register(admin_data: AdminCreate):
     """Register a new admin"""
