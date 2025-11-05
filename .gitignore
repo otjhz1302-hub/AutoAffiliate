@@ -98,3 +98,7 @@ xampp-package/autoaffiliate/frontend/node_modules/.cache/default-development/0.p
 *.env
 *.env.*
 xampp-complete-package.tar.gz
+-e 
+# Environment files
+*.env
+*.env.*
