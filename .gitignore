@@ -93,3 +93,8 @@ frontend/node_modules/.cache/default-development/0.pack
 *.env
 *.env.*
 xampp-package/autoaffiliate/frontend/node_modules/.cache/default-development/0.pack
+-e 
+# Environment files
+*.env
+*.env.*
+xampp-complete-package.tar.gz
